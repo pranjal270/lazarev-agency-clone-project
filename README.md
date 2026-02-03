@@ -6,7 +6,7 @@ This project was built as a hands-on exploration of frontend motion design and U
 
 🔗 Live Demo
 
-👉 Deployed Website: PASTE YOUR DEPLOYED LINK HERE
+👉 Deployed Website: https://lazarev-websiteclone.netlify.app/
 
 🧠 Project Focus
 
