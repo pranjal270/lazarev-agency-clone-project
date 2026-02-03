@@ -35,6 +35,10 @@
 
 // }
 
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
 function loadingPageAnimatn(){
     let tl = gsap.timeline()
 
@@ -61,7 +65,6 @@ function loadingPageAnimatn(){
         opacity:0,
         delay: -0.4
     })
-
 }
 
 function navAnimation(){
