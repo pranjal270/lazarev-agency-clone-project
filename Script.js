@@ -1,37 +1,66 @@
-function LocomotiveAnimation(){
-    gsap.registerPlugin(ScrollTrigger);
+// function LocomotiveAnimation(){
+//     gsap.registerPlugin(ScrollTrigger);
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true,
+// const locoScroll = new LocomotiveScroll({
+//   el: document.querySelector("#main"),
+//   smooth: true,
 
-  // for tablet smooth
-  tablet: { smooth: true },
+//   // for tablet smooth
+//   tablet: { smooth: true },
 
-  // for mobile
-  smartphone: { smooth: true }
-});
-locoScroll.on("scroll", ScrollTrigger.update);
+//   // for mobile
+//   smartphone: { smooth: true }
+// });
+// locoScroll.on("scroll", ScrollTrigger.update);
 
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length
-      ? locoScroll.scrollTo(value, 0, 0)
-      : locoScroll.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {
-      top: 0,
-      left: 0,
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
-  }
-});
+// ScrollTrigger.scrollerProxy("#main", {
+//   scrollTop(value) {
+//     return arguments.length
+//       ? locoScroll.scrollTo(value, 0, 0)
+//       : locoScroll.scroll.instance.scroll.y;
+//   },
+//   getBoundingClientRect() {
+//     return {
+//       top: 0,
+//       left: 0,
+//       width: window.innerWidth,
+//       height: window.innerHeight
+//     };
+//   }
+// });
 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-ScrollTrigger.refresh();
+// ScrollTrigger.refresh();
+
+// }
+
+function loadingPageAnimatn(){
+    let tl = gsap.timeline()
+
+    tl.from('#page1', {
+        opacity:0,
+        duration:0.2,
+        delay:0.2
+    })
+
+    tl.from('#page1', {
+        transform: 'scaleX(0.7) scaleY(0.2) translateY(10%)',
+        borderRadius: '150px',
+        duration:2,
+        ease: 'expo.out'
+    })
+
+    tl.from('#page1 h1, #page1 div, #page1 p', {
+        opacity:0,
+        duration:0.3,
+        stagger: 0.2
+    })
+
+    tl.from('nav', {
+        opacity:0,
+        delay: -0.4
+    })
 
 }
 
@@ -138,7 +167,9 @@ function page5VideoAnimatn(){
     })
 }
 
-LocomotiveAnimation()
+// LocomotiveAnimation()
+
+
 
 navAnimation()
 
@@ -147,3 +178,5 @@ page2Animation()
 page3videoAnimation()
 
 page5VideoAnimatn()
+
+loadingPageAnimatn()
