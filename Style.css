@@ -21,6 +21,8 @@ nav {
     height: 5.9vw;
     padding: 2vw 10vw;
     justify-content: space-between;
+    background-color: #000;
+    z-index: 10;
 }
 nav #nav-part2 .nav-elem h5{
     text-transform: uppercase;
@@ -131,11 +133,363 @@ nav button svg {
 }
 
 #moving-div {
-    background-color: rgb(255, 155, 155);
-    
+    position: absolute;
+    bottom: 6%;
+    margin-top: 10vh;
+    display: flex;
+    align-items:center;
+    padding: 1.2vw;
+    width: 44%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#moving-div .move { 
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+    animation-name: move;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#moving-div .move img{
+    height: 1vw;
+}
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#blur-left {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right,rgb(0, 0, 0), transparent);
+    position: absolute;
+    top: 0;
+    left: -26px;
+    z-index: 5;
+}
+
+#blur-right {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to left, #000,transparent);
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 #page2 {
     height: 100vh;
     width: 100%;
     background-color: black;
+    position: relative;
+    padding: 2vw 9vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 10px solid black;
+}
+
+#page2-left {
+    /* background-color: rgb(93, 40, 49); */
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1.5vw;
+    padding-bottom: 3.4vw;
+
+}
+
+#page2-left h4 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 2vw;
+    font-size: 0.8vw;
+}
+
+#page2-left h4:nth-last-child(1) {
+    font-size:1.2vw;
+}
+
+#page2-right {
+    height: 100%;
+    width: 50%;
+}
+
+.right-elem {
+    /* background-color: pink; */
+    padding-top: 1.9vw;
+    padding-bottom: 5vw;
+    position: relative;
+    border-bottom: 0.8px solid #333;
+}
+
+#page2-right h2 {
+    font-size: 1.4vw;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+#page2-right img{
+    height: 7vw;
+    width: 7vw;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size:cover ;
+    position: relative;
+}
+
+#page3-center {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#page3-icon {
+    background-color: rgb(255, 255, 255);
+    font-size: 4vw;
+    padding: 3vw;
+    border-radius: 50%;
+}
+#page3-icon i {
+    color: #000;
+    font-size: 4vw;
+}
+
+#page3-center h5{
+    color:black;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-top: 12px;
+    font-size: 0.8vw;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transform: translateY(30%);
+}
+
+#page3-center:hover h5{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+#page3 video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    transform: scaleX(0.7) scaleY(0.3);
+    opacity: 0;
+    border-radius:10px ;
+    z-index: 999;
+}
+
+#page4 { 
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vw;
+}
+
+#page4-left{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 50%;
+    padding: 3vw 4vw;
+}
+
+#page4-left h2 {
+    color: black;
+    font-size: 2.7vw;
+    font-weight: 700;
+}
+
+#page4-right{
+    height: 100%;
+    width: 50%;
+    padding: 2vw 3vw;
+}
+
+#page4-left, #page4-right {
+    padding-bottom: 1vw;
+}
+
+#page4-top-div p {
+    padding-top: 2.6vw;
+    color: grey;
+    font-size: 0.8vw;
+}
+
+#page4-top-div h6 {
+    padding-top: 1.7vw;
+    color: rgb(0, 0, 0);
+    font-size: 1.4vw;
+    font-weight: 200;
+    padding-bottom: 4vw;
+
+}
+
+#page4-bottom-div h6 {
+    padding-top: 1.7vw;
+    color: rgb(0, 0, 0);
+    font-size: 1.4vw;
+    font-weight: 200;
+}
+
+#page4-bottom-div p {
+    padding-top: 2vw;
+    color: grey;
+    font-size: 0.8vw;
+}
+#page4 {
+    padding-bottom: 1vw;
+}
+#random-div1 {
+    height: 20vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 6vw ;
+    padding-top: 2vw;
+    margin-top: 3vw;
+}
+
+.coloumn-div3{
+    background-color: rgb(233, 233, 233);
+    height: 90%;
+    width: 35%;
+    padding: 1.8vw 1vw;
+}
+
+.coloumn-div3 :nth-child(1) {
+    font-size: 4vw;
+    color: #000;
+    padding-bottom: 1.8vw;
+    font-weight: 300;
+}
+
+.coloumn-div3 :nth-child(2) {
+    font-size: 0.8vw;
+    color: #000;
+}
+
+#random-div2{
+    height: 28vw;
+    width: 100%;
+    padding-left: 30vw;
+}
+
+#rd-top p{
+    color:#000000;
+    padding-top: 9vw;
+    padding-right: 10vw;
+    font-size: 1vw;
+
+}
+
+#rd-top{
+    display: flex;
+
+}
+
+#rd-top h6{
+    color:#000000;
+    padding-top: 8vw;
+    font-size: 2vw;
+    font-weight: 200;
+}
+#rd-bottom h6{
+    color:#000000;  
+    font-size: 2vw;
+    font-weight: 200;
+}
+
+#page5 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+
+}
+.section{
+    height: 76vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12vh 8vw;
+    padding-top: 1vw;
+    /* padding-bottom: 0; */
+}
+
+.sec-left {
+    height: 90%;
+    width: 22%;
+    padding: 20px;
+    border-top: 2px solid black;
+}
+.sec-right {
+    height: 90%;
+    width: 70%;
+    background-color: rgb(132, 28, 45);
+    position: relative;
+}
+
+.sec-left h3{
+    color: #000;
+    font-size: 2.5vw;
+    font-weight: 200;
+    padding-bottom: 5vw;
+}
+
+.sec-left h4{
+    color: #000;
+    font-size: 1.16vw;
+    font-weight: 200;
+}
+
+.sec-right img {
+    height: 100%;
+    width: 100%;
+    object-fit:cover ;
+}
+.sec-right video {
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: opacity ease 0.3s;
+    /* opacity: 0; */
 }
