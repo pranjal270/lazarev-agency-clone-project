@@ -1,75 +1,70 @@
-High-Interaction Frontend Website (GSAP + Motion Design)
+# High-Interaction Frontend Website (GSAP + Motion Design)
 
-A high-fidelity frontend project inspired by modern digital product design agencies, focused on motion, interaction, and user experience rather than static UI.
+A high-fidelity frontend project inspired by modern digital product design agencies, focused on **motion, interaction, and user experience** rather than static UI.
 
-This project was built as a hands-on exploration of frontend motion design and UI engineering, translating design intent into interactive behavior.
+This project was built as a **hands-on exploration of frontend motion design and UI engineering**, translating design intent into interactive behavior.
 
-🔗 Live Demo
+---
 
-👉 Deployed Website: https://lazarev-websiteclone.netlify.app/
+## 🔗 Live Demo
 
-🧠 Project Focus
+👉 **Deployed Website:**  
+https://lazarev-websiteclone.netlify.app/
 
-The goal of this project was to translate design intent into motion using JavaScript and GSAP, with careful attention to timing, easing, and user-driven interactions.
+---
 
-Key areas of focus:
+## 🧠 Project Focus
 
-Page-load and navigation animations
+The goal of this project was to **translate design intent into motion** using JavaScript and GSAP, with careful attention to **timing, easing, and user-driven interactions**.
 
-Hover and mouse-driven micro-interactions
+**Key areas of focus:**
+- Page-load and navigation animations  
+- Hover and mouse-driven micro-interactions  
+- Video reveal and playback interactions  
+- Clean layout structure for complex sections  
+- Smooth, responsive user experience  
 
-Video reveal and playback interactions
+---
 
-Clean layout structure for complex sections
+## ✨ Features
 
-Smooth, responsive user experience
+- Animated navigation with dropdown motion  
+- GSAP timeline-based page load animations  
+- Mouse-follow image interactions  
+- Interactive video reveal on user action  
+- Hover-based video previews in content sections  
+- Smooth transitions and consistent easing  
 
-✨ Features
+---
 
-Animated navigation with dropdown motion
+## 🛠 Tech Stack
 
-GSAP timeline-based page load animations
+- **HTML5** – semantic structure  
+- **CSS3** – layout, responsiveness, transitions  
+- **JavaScript (Vanilla)** – interaction logic  
+- **GSAP** – animations, timelines, easing  
 
-Mouse-follow image interactions
+---
 
-Interactive video reveal on user action
+## 🚀 What I Learned
 
-Hover-based video previews in content sections
+- How animation timing affects UX, not just visuals  
+- Structuring GSAP timelines for maintainable motion logic  
+- Handling mouse events for real-time interactions  
+- Building interactive UI without heavy frameworks  
+- Balancing visual impact with performance considerations  
 
-Smooth transitions and consistent easing
+---
 
-🛠 Tech Stack
+## 🔧 Status
 
-HTML5 – semantic structure
+This project is **under active iteration**, focusing on:
+- Performance improvements  
+- Animation polish  
+- Cleaner interaction handling  
 
-CSS3 – layout, responsiveness, transitions
+---
 
-JavaScript (Vanilla) – interaction logic
+## 📌 Notes
 
-GSAP – animations, timelines, easing
-
-
-🚀 What I Learned
-
-How animation timing affects UX, not just visuals
-
-Structuring GSAP timelines for maintainable motion logic
-
-Handling mouse events for real-time interactions
-
-Building interactive UI without heavy frameworks
-
-Balancing visual impact with performance considerations
-
-🔧 Status
-
-This project is under active iteration, focusing on:
-Performance improvements
-
-Animation polish
-
-Cleaner interaction handling
-
-📌 Notes
-
-This is a learning-focused frontend project, built from scratch to better understand modern UI engineering and motion design patterns.
+This is a **learning-focused frontend project**, built from scratch to better understand modern UI engineering and motion design patterns.
